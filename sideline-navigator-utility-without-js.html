@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            border: 1px solid black;
+            height: 500vh;
+        }
+
+        .section {
+            height: 100vh;
+            border: 1px solid black;
+        }
+
+        .dots {
+            //border:2px solid black;
+            position: fixed;
+            right: 0px;
+            top: 300px;
+            height: auto;
+            width: 40px;
+        }
+
+            .dots .dot {
+                border: 1px solid black;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+        .active {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dots">
+            <a href="#a"><div class="dot"></div></a>
+            <a href="#b"><div class="dot"></div></a>
+            <a href="#c"><div class="dot"></div></a>
+            <a href="#d"><div class="dot"></div></a>
+            <a href="#e"><div class="dot"></div></a>
+        </div>
+        <div class="section" id="a"><h1>Section 1</h1></div>
+        <div class="section" id="b"><h1>Section 2</h1></div>
+        <div class="section" id="c"><h1>Section 3</h1></div>
+        <div class="section" id="d"><h1>Section 4</h1></div>
+        <div class="section" id="e"><h1>Section 5</h1></div>
+    </div>
+
+    <script>
+
+        /*
+        var allDotElements = document.querySelectorAll('.dot');
+        console.log(allDotElements); //show this first...
+        // create a for loop which adds active class only to the element being clicked;
+
+        for (i = 0; i < allDotElements.length; i++) {
+            allDotElements[i].addEventListener('click', function (e) {
+                //alert('i am being clicked')
+                console.log(e.target)
+                //e.target.classList.add('active'); //show what happens -- active class gets added to all dot elements -- at the same time
+                // but what we want is: to add active class only to the element that is being clicked
+                for (i = 0; i < allDotElements.length; i++) {
+                    allDotElements[i].classList.remove('active'); // so we again loop through all dot elements and ensure active class is removed from all the items
+                }
+                e.target.classList.add('active'); //then we add active class to the element being clicked
+
+
+            })
+        }
+        */
+
+    </script>
+</body>
+</html>

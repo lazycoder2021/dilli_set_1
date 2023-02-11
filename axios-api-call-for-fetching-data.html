@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+
+    <p>Teach this only after you install json formatter chrome extension -- for prettying the incoming data</p>
+
+    <button class="btn">Get Data</button>
+
+    <p>This lesson covers:</p>
+    <ol>
+        <li>Click event</li>
+        <li>Js function</li>
+        <li>Api call for getting/fetching data using Axios CDN</li>
+        <li>Async/Await concept </li>
+        <p>------- (by calling add() within the api call -- to illustrate the order of execution)</p>
+        <li>Js alert box</li>
+    </ol>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script>
+
+        document.querySelector('.btn').addEventListener('click', getUser)
+        
+
+        async function getUser() {
+            const response =  await axios.get('https://jsonplaceholder.typicode.com/todos');
+            console.log(response.data);
+            //add(); 
+        }
+
+        /*
+
+        function add() {
+            alert(2+3)
+        }
+
+        */
+
+       
+
+    </script>
+</body>
+</html>
